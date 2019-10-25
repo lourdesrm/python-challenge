@@ -13,7 +13,8 @@ pybank = os.path.join("budget_data.csv")
 months_list=[]
 total_list=[]
 # pybank = open("budget_data.csv")
-
+print(f"Financial Analysis")
+print(f"-------------------------------")
 with open(pybank, "r", newline="") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
 
@@ -25,28 +26,26 @@ with open(pybank, "r", newline="") as csvfile:
     #Read through each row of data after the header to get the months
     for row in csvreader:
 
-        rows=[row[0]]
+        rows=row[0]
         
         months_list.append(rows)
 
-        total=[row[1]]
+        total=row[1]
 
         total_list.append(total)
         
-    # print total number of months in the dataset   
-print(f"The total number of months in the dataset is {len(months_list)}")
+               
+# print total number of months in the dataset 
+totalmonth = len(months_list)
+print(f"Total Months: {totalmonth}")
 
 
-flattened=[]
-
-for sublist in total_list:
-    for val in sublist:
-        flattened.append(val)
-
-
-flattened=list(map(int,flattened))
+total_list_int=list(map(int,total_list))
 
 
 # print net total amount of "Profit/Losses"
-print(f"The net total amount of Profit/Losses in the dataset is equal to {m.fsum(flattened)}")
+totalsum = m.fsum(total_list_int)
+print(f"Total: {totalsum}")
+
+
 
