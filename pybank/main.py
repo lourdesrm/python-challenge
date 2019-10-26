@@ -7,6 +7,7 @@
 import os
 import csv
 import math as m
+import numpy as np
 
 pybank = os.path.join("budget_data.csv")
 
@@ -45,7 +46,11 @@ total_list_int=list(map(int,total_list))
 
 # print net total amount of "Profit/Losses"
 totalsum = m.fsum(total_list_int)
-print(f"Total: {totalsum}")
+print(f"Total: ${totalsum}")
 
+# calculate average change using numpy module (diff function)
+diff_list = np.diff(total_list_int)
 
+# print average using numpy module (avg function)
+print(f"Average Change: ${np.average(diff_list)}")
 
