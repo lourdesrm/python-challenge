@@ -6,6 +6,8 @@
 
 import os
 import csv
+import statistics
+from statistics import mode
 
 pypoll = os.path.join("election_data.csv")
 
@@ -42,17 +44,29 @@ total=len(total_votes)
 print(f"Total Votes : {total}")
 print(f"-------------------------------")
 
+# count for each candidate
 count_khan = total_candidates.count('Khan')
 count_corr = total_candidates.count('Correy')
 count_li = total_candidates.count('Li')
 count_o = total_candidates.count("O'Tooley")
 
+# percentage for each candidate
 percent_khan= ((int(count_khan) * 100)/int(total))
 percent_corr= ((int(count_corr) * 100)/int(total))
 percent_li=((int(count_li) * 100)/int(total))
 percent_o=((int(count_o) * 100)/int(total))
 
+# Final summary
 print(f'Khan: {percent_khan}% ({count_khan})')
 print(f'Correy: {percent_corr}% ({count_corr})')
 print(f'Li: {percent_li}% ({count_li})')
 print(f"O'Tooley: {percent_o}% ({count_o})")
+
+
+# and the winner is...
+def most_common(total_candidates):
+    return(mode(total_candidates))
+
+print(f"-------------------------------")
+print(f'Winner:  {most_common(total_candidates)}')
+print(f"-------------------------------")
