@@ -57,10 +57,12 @@ percent_li=((int(count_li) * 100)/int(total))
 percent_o=((int(count_o) * 100)/int(total))
 
 # Final summary
-print(f'Khan: {percent_khan}% ({count_khan})')
-print(f'Correy: {percent_corr}% ({count_corr})')
-print(f'Li: {percent_li}% ({count_li})')
-print(f"O'Tooley: {percent_o}% ({count_o})")
+
+
+print(f'Khan: {"{0:.2f}".format(percent_khan)}% ({count_khan})')
+print(f'Correy: {"{0:.2f}".format(percent_corr)}% ({count_corr})')
+print(f'Li: {"{0:.2f}".format(percent_li)}% ({count_li})')
+print(f"O'Tooley: {'{0:.2f}'.format(percent_o)}% ({count_o})")
 
 
 # and the winner is...
@@ -70,3 +72,5 @@ def most_common(total_candidates):
 print(f"-------------------------------")
 print(f'Winner:  {most_common(total_candidates)}')
 print(f"-------------------------------")
+
+
