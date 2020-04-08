@@ -27,7 +27,7 @@ Python script to calculate each of the following:
 
 ![pypoll](https://inudgeyou.com/wp-content/uploads/2017/07/Polling-station.jpg)
 
-ython script for analyzing vote-counting process from a set of poll data called election_data.csv. The dataset is composed of three columns: Voter ID, County, and Candidate.
+Python script for analyzing vote-counting process from a set of poll data called election_data.csv. The dataset is composed of three columns: Voter ID, County, and Candidate.
 
 Python script to calculate each of the following:
 
