@@ -1,6 +1,6 @@
 # Python challenge
 
-In this challenge, python skills will be used in two different real-world situations to facilitate and optimize the data analysis.
+In this challenge, simple python skills are used in two different real-world situations to facilitate and optimize the data analysis.
 
 ## PyBank
 
